@@ -10,6 +10,5 @@
         <input type="number" name="inputUser" min="1" max="1000" placeholder="Guess between 1-1000">
         <input type="submit"name="guessButton" value="Guess">
     </form>
-
 </body>
 </html>
