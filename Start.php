@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Guessing Number Game</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
   <?php require('checkValue.php')?>
