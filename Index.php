@@ -10,5 +10,6 @@
     <form action="create.php" method="post">
     <input type="submit" name="genRandomNumber" value="Start" class="button">
     </form>
+    
 </body>
 </html>
