@@ -5,27 +5,32 @@ if(isset($_SESSION['views']))
     $_SESSION['views'] = $_SESSION['views']+1;
 else
     $_SESSION['views']=1;
-
-
+//Store random value as variable
 $randomNumber = $_SESSION['randomnumber'];
-$inputUser = $_POST['inputUser'];
 
-echo $randomNumber;
+//If u want to cheat ^_^
+// echo $randomNumber
+
 //iF GUESS BUTTON IS CLICKED
 if (isset($_POST['guessButton'])) {
+  //Store user input
+  $inputUser = $_POST['inputUser'];
   //Answer is correct
-  if ($inputUser == $randomNumber) {
+  if (empty($inputUser)) {
+    echo "You have to fill in a number!";
+  }
+  elseif ($inputUser == $randomNumber) {
     //store attempts in session
     $_SESSION['views'] = $_SESSION['views'];
     header("Location: resultPage.php");
   }
   //Answer is greater than user input
   elseif ($inputUser > $randomNumber) {
-    echo "helaas, het getal is kleiner dan de invoer";
+     echo 'unfortunately the number is slightly lower';
   }
-  //Answer is smaller than user input
-  else {
-    echo "hup hup, iets meer omhoog";
+    //Answer is smaller than user input
+  elseif($inputUser < $randomNumber) {
+    echo "come on!! a little higher";
   }
 }
 

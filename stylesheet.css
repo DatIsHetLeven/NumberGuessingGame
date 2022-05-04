@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+h1,h3{
+  text-align: center;
+}
+
+.button{
+  width: 20%;
+  height: 15%;
+  position: relative;
+  left: 40%;
+  border: 3px solid black;
+}
+
+#userInput{
+  width: 200px;
+  position: relative;
+  left: 40%;
+
+}

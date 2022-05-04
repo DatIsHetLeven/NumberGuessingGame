@@ -2,15 +2,15 @@
 <html>
 <head>
     <title>Guessing Number Game</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <?php require('endOfGame.php')?>
     <h1>Cheers, u gessed the number!</h1>
     <form action="endOfGame.php" method="post">
-      <input type="submit"name="desButton" value="Reset Game!">
-      Je hebt het juiste getal geraden, poging nodig :
-        <?php session_start(); $randomNumber = $_SESSION['randomnumber']; echo $randomNumber; ?>
-        <?php  $attempt = $_SESSION['views']; echo $attempt; ?>
+      <input type="submit"name="desButton" value="Reset Game!" class="button">
+      <br>You gessed the right number (<?php  echo $randomNumber?>)</br>
+      <br>Attempts needed : <?php echo $attempt;?>
     </form>
 </body>
 </html>

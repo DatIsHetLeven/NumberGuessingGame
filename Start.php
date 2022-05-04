@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Guessing Number Game</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+  <?php require('checkValue.php')?>
     <h1>Guessing Number Game</h1>
-    <form action="checkValue.php" method="post">
-        <input type="number" name="inputUser" min="1" max="1000" placeholder="Guess between 1-1000">
-        <input type="submit"name="guessButton" value="Guess">
+    <form  method="post"  action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input type="number" name="inputUser" min="1" max="1000" placeholder="Guess between 1-1000" id="userInput">
+        <input type="submit"name="guessButton" value="Guess" class="button">
     </form>
 </body>
 </html>
